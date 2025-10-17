@@ -1,0 +1,119 @@
+/* ===== CTA.css ===== */
+
+:root {
+  --cream-50: #fff0d9;
+  --gold-500: #c69f6b;
+  --brown-700: #6d4b2f;
+}
+
+.cta{
+  position: relative;
+  z-index: 0;
+  margin: 0;               /* evita márgenes que colapsen con el hero */
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ min-height: 636px;
+  max-width: 100%;
+  color: #6d4b2f;
+  text-align: center;
+  background: var(--cream-50)
+    url("../assets/bocaraton.png") center/cover no-repeat;
+}
+/* Contenedor */
+.cta .panel-cta {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* Título base (DM Sans) */
+/* Título base (DM Sans) */
+.cta .h2-cta{
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: clamp(36px, 5vw, 54px);
+  letter-spacing: .05em;
+  color: var(--gold-500);
+  margin-bottom: 12px;
+
+  /* evita que se parta el título en dos líneas */
+  display: inline-flex;          /* mantiene texto + span en una sola línea */
+  align-items: baseline;         /* alinea la línea base del texto y del span */
+  gap: .35ch;                    /* pequeño espacio entre partes */
+  white-space: nowrap;           /* no permitir saltos */
+}
+
+/* Solo la parte cursiva */
+.cta .h2-cta .accent{
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 100px;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  transform: translateY(2px);
+}
+
+/* En pantallas pequeñas sí permitimos que salte a dos líneas */
+@media (max-width: 768px){
+  .cta .h2-cta{
+    white-space: normal;
+    flex-wrap: wrap;             /* se parte si no cabe */
+  }
+}
+
+
+
+/* Texto descriptivo */
+.cta p {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(18px, 1.4vw, 30px);
+  margin: 16px auto 40px;
+  max-width: 720px;
+  line-height: 1.6;
+  color: var(--gold-500);
+}
+
+/* Botón con borde dorado */
+.cta .btn-cta {
+  display: inline-block;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight:500;
+  color: var(--gold-500);
+  border: 2px solid var(--gold-500);
+  background: transparent;
+  padding: 30px 120px;
+  font-size: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cta .btn:hover {
+  background: var(--gold-500);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .cta {
+    padding: 80px 16px;
+  }
+  .cta .h2 {
+    font-size: clamp(28px, 6vw, 44px);
+  }
+  .cta p {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+  .cta .btn {
+    padding: 16px 28px;
+    font-size: 14px;
+  }
+}

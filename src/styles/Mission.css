@@ -1,0 +1,67 @@
+/* ===== Fuentes (si no las tienes en el global) ===== */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Pinyon+Script&display=swap");
+
+/* ===== Mission ===== */
+.mission.section{
+  background: #f8f1e8;                 /* crema suave */
+  padding: 80px 0 62px;
+  min-height: 636px;
+  max-width: 100%;
+}
+
+/* centramos y limitamos ancho para lectura cómoda */
+.mission .container{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título cursivo grande dorado */
+.mission .h2{
+  font-family: "Pinyon Script", cursive;   /* cursiva elegante */
+  font-weight: 400;
+  font-size: clamp(52px, 8vw, 150px);    /* muy grande como en la ref */
+  color: #c59c6d;                  /* dorado de marca */
+  margin: 0 0 12px 0;
+}
+
+/* Párrafos */
+.mission p{
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(16px, 1.8vw, 28px);
+  color: #584536;
+  margin: 18px auto;
+  max-width: 1200px;
+}
+/* Separador sutil (como un hr muy tenue) */
+.mission .faint{
+  height: 1px;
+  border: 0;
+  margin: 24px auto;
+  max-width: 720px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,.08) 15%,
+    rgba(0,0,0,.08) 85%,
+    transparent 100%
+  );
+}
+
+/* Remate en negrita más oscuro */
+.mission p strong{
+  color: #623e2a;
+  font-weight: 700;
+  width: 1000px;
+}
+.mission p.promise{
+  white-space: nowrap;      /* no partir líneas */
+  overflow-wrap: normal;
+  word-break: normal;
+  max-width: none;          /* que no lo limite el max-width anterior */
+  margin-top: 28px;
+}
+
+.mission p.secondary{
+ margin-top: 5%;
+} 

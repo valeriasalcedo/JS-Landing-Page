@@ -1,0 +1,188 @@
+:root{ --hero-band-h: 48px; }
+
+
+.hero{
+  position: relative;
+  overflow: visible;
+  min-height: 636px;
+  max-width: 100%;
+  padding-bottom: var(--hero-band-h); 
+}
+
+/* Imagen full-width */
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* Contenedor del texto */
+.hero .hero-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero-left {
+  max-width: 620px;
+  text-align: left;
+}
+
+/* Badge */
+.hero .badge {
+  color: #6b7280;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* Título principal */
+.hero h1 {
+  text-transform: uppercase;
+  line-height: 1.15;
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 88px);
+  border: 3px solid #c7a97c;
+  padding: 14px 18px;
+  background: transparent;
+  box-shadow: 0 0 0 4px rgba(199, 169, 124, 0.18) inset;
+  margin: 0 0 16px 0;
+}
+
+/* Subtítulo */
+.hero .lead {
+  color: #3f4753;
+  font-size: clamp(16px, 1.6vw, 34px);
+  margin-top: 8px;
+}
+
+/* Botón */
+.hero .cta-hero {
+  margin-top: 24px;
+}
+.hero .btn {
+  border: 2px solid #c7a97c;
+  color: #1f2a37;
+  background: transparent;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hero .btn:hover {
+  background: #c7a97c20;
+}
+
+/* Banda dorada inferior full-width */
+.hero .note{
+  position: absolute;
+  left: 50%;
+  bottom: 0;               /* <- pegada al fondo del hero */
+  transform: translateX(-50%);
+  width: 100%;                /* full-bleed */
+  margin: 0;                   /* sin márgenes */
+  height: var(--hero-band-h);  /* mismo alto que reservamos arriba */
+  line-height: var(--hero-band-h);
+  background: #c7a97c;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 -1px 0 rgba(0,0,0,.04) inset;
+  z-index: 4;                  /* por encima de todo */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    :root{ --hero-band-h: 44px; }
+    .hero {min-height: 500px;}
+  }
+  .hero .hero-content {
+    padding-top: 72px;
+  }
+ 
+}
+/* ===== Variante: izquierda centrada, sin marco en H1 ===== */
+.hero--centered-left .hero-content{
+  padding-top: 150px;
+  display: grid;
+  justify-items: start; /* mantiene el bloque en el lado izquierdo */
+}
+
+.hero--centered-left .hero-left{
+  max-width: 1000px;            /* ancho cómodo del bloque de texto */
+  text-align: center;          /* CENTRADO como en tu captura */
+}
+
+/* Badge centrado con tracking */
+.hero--centered-left .badge{
+  text-align: center;
+  font-size: clamp(16px, 3vw, 20px);
+  margin-top: 8px;  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: .28em;
+  color: #623e2a;
+  margin-bottom: 2px;
+}
+
+/* Título grande, sin borde, con tracking suave */
+.hero--centered-left h1{
+  margin: 0 0 0px 0;
+  border: 0;                   /* <-- sin caja dorada */
+  box-shadow: none;
+  text-transform: uppercase;
+  font-weight: 380;;
+  line-height: 1.15;
+  font-size: clamp(32px, 4.4vw, 56px);
+  color: #623e2a;
+  position: relative;         /* para las pseudo-líneas */
+  display: inline-block;  
+}
+
+/* Subtítulo centrado */
+.hero--centered-left .lead{
+  text-align: center;
+  color: #623e2a;
+  font-size: clamp(16px, 3vw, 30px);
+  margin-top: 8px;
+}
+
+/* Botón centrado y un pelín más ancho */
+.hero--centered-left .cta-hero{
+  display: grid;
+  place-items: center;
+  margin-top: 70px;
+}
+.hero--centered-left .btn{
+  padding: 12px 34px;
+  border: 2px solid #c7a97c;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+
+/* Responsive fino */
+@media (max-width: 992px){
+  .hero--centered-left .hero-content{ padding-top: 72px; }
+  .hero--centered-left .hero-left{ max-width: 92%; }
+}
+

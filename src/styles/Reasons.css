@@ -1,0 +1,110 @@
+/* ===== Reasons.css ===== */
+:root{
+  --blue-900:#0a1e3f;
+  --blue-800:#112b51;
+  --gold-500:#c69f6b;
+  --card-line: rgba(199,169,124,.85);
+  --font: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+}
+
+/* Sección oscura con imagen de fondo + overlay */
+.reasons.section{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ min-height: 650px;
+  max-width: 100%;  
+  padding: 60px 20px 80px;
+  position: relative;
+  margin-top: -10px;
+  border-top: 0;
+  color:#143057;
+  background:
+    url("../assets/Jewelry.png") center/cover no-repeat; /* <-- reemplaza la ruta si usas otra */
+}
+
+/* Título */
+.reasons .reasons-content {
+  margin-bottom: 80px;
+
+}
+.reasons .h2{
+  /* quita el ancho y padding que distorsionan el centrado */
+  max-width: 1000px;       /* opcional: controla el ancho, pero no forces width fijo */
+  margin: 0 auto;          /* centra el título */
+  padding-left: 0;
+
+  font-family: var(--font);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 55px;
+  font-weight: 400;         /* 450 no es un peso estándar; usa 400/500 */
+  color: #fff;
+
+  line-height: 0.5;        /* <-- clave: junta las dos líneas */
+}
+
+/* si lo quieres aún más cerrado, baja a 1.0 o incluso 0.98 */
+.reasons .h2.tight { line-height: 1.0; }
+
+
+/* Grid de 3 tarjetas */
+.reasons .grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1600px;
+}
+
+/* Tarjeta */
+.reasons .card{
+  position: relative;
+  padding: 20px 10px;
+  border: 2px solid var(--card-line);
+  border-radius: 4px;
+  background: rgba(104, 83, 83, 0);         /* leve vidrio */
+  box-shadow: 0 10px 28px rgba(0,0,0,.18) inset,
+              0 8px 18px rgba(0,0,0,.12);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  min-height: 400px;                    /* para equilibrio visual */
+}
+
+/* Hover sutil */
+.reasons .card:hover{
+  transform: translateY(-2px);
+  background: rgba(0,0,0,.34);
+  box-shadow: 0 10px 28px rgba(0,0,0,.22) inset,
+              0 10px 20px rgba(0,0,0,.18);
+}
+
+/* Título de tarjeta */
+.reasons .card .h3{
+  text-align:center;
+  margin: 10px 5 10px ;
+  padding-left: 80px ;
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 32px);
+  color: #c69f6b;
+  white-space: pre-line; /* respeta los \n */
+  width: 70%;
+}
+
+/* Texto */
+.reasons .card p{
+  margin: 0;
+  text-align: center;
+  line-height: 1.7;
+  color: #dbe7f5;
+  opacity: .95;
+  letter-spacing: .08em;
+  font-size: clamp(14px, 1.4vw, 15px);
+  width: 95%;
+  padding-left: 20px ;
+}
+
+/* Responsivo */
+@media (max-width: 1024px){
+  .reasons .grid{ grid-template-columns: 1fr; gap: 22px; }
+  .reasons .card{ min-height: unset; }
+}

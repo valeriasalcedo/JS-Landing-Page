@@ -1,0 +1,82 @@
+:root{
+  --nav-bg: #122a4a;         /* azul oscuro */
+  --nav-fg: #e9f0f8;         /* texto links */
+  --nav-gold: #c7a97c;       /* dorado del logo/est/2007 */
+}
+
+/* Contenedor principal */
+.navbar{
+  position: sticky; top:0; z-index:50;
+  background: var(--nav-bg);
+  color: var(--nav-fg);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Layout 3 columnas: izquierda | logo | derecha */
+.navbar-inner{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 88px;                         /* altura similar a la referencia */
+  padding-inline: 28px;
+}
+
+/* Menús izquierda/derecha */
+.nav-left, .nav-right{
+  display: flex; align-items: center;
+  gap: 70px;                             /* espacio entre items */
+}
+.nav-left{ 
+  justify-self: start;
+  margin-left: 150px;
+}
+.nav-right{ 
+  justify-self: end; 
+  margin-right: 200px;
+}
+
+/* Estilo de links */
+.nav-left a,
+.nav-right a{
+  color: var(--nav-fg);
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .20em;                 /* tracking amplio */
+  font-size: 20px;
+  padding: 6px 4px;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.nav-left a:hover,
+.nav-right a:hover{ opacity: .85; transform: translateY(-1px); }
+
+/* Teléfono con tracking y separación */
+.call{
+  color: var(--nav-fg);
+  font-weight: 400;
+  letter-spacing: .20em;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+/* LOGO centrado */
+.brand{ justify-self: center; position: relative; display: grid; place-items: center; }
+.brand .logo{
+  overflow: hidden;
+}
+.brand .logo img{
+  width: 140px; height: 100px; object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .navbar-inner{ height: 80px; }
+  .nav-left, .nav-right{ gap: 32px; }
+  .brand::before, .brand::after{ display: none; } /* ocultar EST/2007 si falta espacio */
+}
+@media (max-width: 720px){
+  .nav-left a:nth-child(2){ display:none; }       /* opcional: ocultar ABOUT en móvil */
+  .nav-left a:nth-child(3){ display:none; }       /* opcional: ocultar CHARITIES en móvil */
+  .call{ letter-spacing: .12em; font-size: 14px; }
+}
+
