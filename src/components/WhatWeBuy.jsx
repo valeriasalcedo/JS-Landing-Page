@@ -4,7 +4,6 @@ import "../styles/WhatWeBuy.css";
 export default function WhatWeBuy() {
   return (
     <section id="about" className="wwb">
-      {/* Fondo full-bleed */}
       <img
         className="wwb-bg"
         src={new URL("../assets/wwb.png", import.meta.url).href}
@@ -13,7 +12,6 @@ export default function WhatWeBuy() {
       />
       <div className="wwb-overlay" aria-hidden="true"></div>
 
-      {/* Contenido */}
       <div className="container wwb-content">
         <div className="wwb-right">
           <div className="smallcaps">

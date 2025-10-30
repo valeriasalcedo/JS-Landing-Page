@@ -9,7 +9,6 @@
   padding-bottom: var(--hero-band-h); 
 }
 
-/* Imagen full-width */
 .hero .hero-bg {
   position: absolute;
   top: 0;
@@ -24,7 +23,6 @@
 }
 
 
-/* Contenedor del texto */
 .hero .hero-content {
   position: relative;
   z-index: 3;
@@ -39,7 +37,6 @@
   text-align: left;
 }
 
-/* Badge */
 .hero .badge {
   color: #6b7280;
   letter-spacing: 0.28em;
@@ -47,7 +44,6 @@
   font-size: 13px;
 }
 
-/* Título principal */
 .hero h1 {
   text-transform: uppercase;
   line-height: 1.15;
@@ -60,20 +56,18 @@
   margin: 0 0 16px 0;
 }
 
-/* Subtítulo */
 .hero .lead {
   color: #3f4753;
   font-size: clamp(16px, 1.6vw, 34px);
   margin-top: 8px;
 }
 
-/* Botón */
 .hero .cta-hero {
   margin-top: 24px;
 }
 .hero .btn {
   border: 2px solid #c7a97c;
-  color: #1f2a37;
+  color: #c7a97c;
   background: transparent;
   padding: 12px 26px;
   border-radius: 6px;
@@ -86,15 +80,14 @@
   background: #c7a97c20;
 }
 
-/* Banda dorada inferior full-width */
 .hero .note{
   position: absolute;
   left: 50%;
-  bottom: 0;               /* <- pegada al fondo del hero */
+  bottom: 0;              
   transform: translateX(-50%);
-  width: 100%;                /* full-bleed */
-  margin: 0;                   /* sin márgenes */
-  height: var(--hero-band-h);  /* mismo alto que reservamos arriba */
+  width: 100%;         
+  margin: 0;              
+  height: var(--hero-band-h); 
   line-height: var(--hero-band-h);
   background: #c7a97c;
   color: #fff;
@@ -104,10 +97,9 @@
   font-size: 15px;
   font-weight: 600;
   box-shadow: 0 -1px 0 rgba(0,0,0,.04) inset;
-  z-index: 4;                  /* por encima de todo */
+  z-index: 4;                 
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .hero {
     :root{ --hero-band-h: 44px; }
@@ -118,19 +110,17 @@
   }
  
 }
-/* ===== Variante: izquierda centrada, sin marco en H1 ===== */
 .hero--centered-left .hero-content{
   padding-top: 150px;
   display: grid;
-  justify-items: start; /* mantiene el bloque en el lado izquierdo */
+  justify-items: start; 
 }
 
 .hero--centered-left .hero-left{
-  max-width: 1000px;            /* ancho cómodo del bloque de texto */
-  text-align: center;          /* CENTRADO como en tu captura */
+  max-width: 1000px;    
+  text-align: center;     
 }
 
-/* Badge centrado con tracking */
 .hero--centered-left .badge{
   text-align: center;
   font-size: clamp(16px, 3vw, 20px);
@@ -142,21 +132,19 @@
   margin-bottom: 2px;
 }
 
-/* Título grande, sin borde, con tracking suave */
 .hero--centered-left h1{
   margin: 0 0 0px 0;
-  border: 0;                   /* <-- sin caja dorada */
+  border: 0;          
   box-shadow: none;
   text-transform: uppercase;
   font-weight: 380;;
   line-height: 1.15;
   font-size: clamp(32px, 4.4vw, 56px);
   color: #623e2a;
-  position: relative;         /* para las pseudo-líneas */
+  position: relative;       
   display: inline-block;  
 }
 
-/* Subtítulo centrado */
 .hero--centered-left .lead{
   text-align: center;
   color: #623e2a;
@@ -164,7 +152,6 @@
   margin-top: 8px;
 }
 
-/* Botón centrado y un pelín más ancho */
 .hero--centered-left .cta-hero{
   display: grid;
   place-items: center;
@@ -179,10 +166,234 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 768px){
 
-/* Responsive fino */
-@media (max-width: 992px){
-  .hero--centered-left .hero-content{ padding-top: 72px; }
-  .hero--centered-left .hero-left{ max-width: 92%; }
+  .hero{
+    position: relative;
+    min-height: 92vh; 
+    overflow: hidden;
+  }
+
+  .hero img,
+  .hero picture,
+  .hero video{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;                 
+    object-position: 25% center;      
+  }
+
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.15));
+    pointer-events:none;
+  }
+
+  .hero .content,  
+  .hero__content{
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 12%;                  
+    padding: 0 20px;             
+    text-align: center;           
+    z-index: 2;
+  }
+
+  .hero .eyebrow{ font-size: clamp(11px, 2.6vw, 14px); letter-spacing: .28em; }
+  .hero h1{ font-size: clamp(22px, 8vw, 36px); line-height: 1.12; margin: 10px 0 6px; color: #5f503a;}
+  .hero .badge{ font-size: clamp(12px, 3.6vw, 16px); margin-top: 8px; color: #5f503a; }
+  .hero .lead{ font-size: clamp(12px, 3.6vw, 30px); margin-top: 8px; color: #ffff; }
+
+  .hero .gold-band{
+    width: min(92vw, 520px);    
+    margin: 16px auto 0;
+  }
+
+  .hero .btn, .hero .cta{
+    width: min(92vw, 420px);
+    margin: 18px auto 0;
+    display: inline-flex;
+    justify-content: center;
+  }
 }
 
+@media (max-width: 520px){
+  .hero{ min-height: 88vh; }
+  .hero .content, .hero__content{ bottom: 10%; padding: 0 16px; }
+  .hero h1{ font-size: clamp(20px, 9.2vw, 32px); background-color: rgba(229, 255, 255, 0);  /* leve contraste, opcional */
+; }
+}
+
+@media (max-width: 768px){
+
+ 
+  .hero .hero-bg{
+    object-fit: cover;
+    object-position: 78% 28%;
+  }
+
+  .hero .hero-content{
+    position: absolute;
+    top: 10svh;         
+    left: 0; right: 0;
+    z-index: 3;
+    padding: 0 20px;
+    display: block;
+  }
+
+  .hero-left{
+    max-width: 78vw;    
+    margin-left: 6vw;      
+    text-align: left;   
+  }
+
+  .hero .badge,
+  .hero h1,
+  .hero .lead{
+    color: #623e2a;        
+    text-shadow: none;
+  }
+    .hero .btn{
+    width: auto !important;        
+    min-width: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 18px;            
+    font-size: 13px;
+    letter-spacing: .14em;
+    border-width: 1.5px;          
+    border-radius: 8px;
+
+    background: rgba(18,42,74,0.12); 
+    color: #1f2a37;
+    margin: 0 auto; 
+    z-index: 3;     
+  }
+
+  .hero .cta-hero{
+    margin-top: 14px;
+    display: flex; justify-content: flex-start;
+  }
+
+  .hero .btn{
+    padding: 10px 18px;
+    font-size: 13px;
+    letter-spacing: .14em;
+    border-width: 1.5px;
+    border-radius: 8px;
+    background: transparent;
+    color: #1f2a37;
+  }
+
+.note { 
+  overflow: hidden; 
+  position: relative; 
+  text-align: center;
+}
+
+.note-track{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--note-gap, 48px);
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.note-item{
+}
+
+.note::before,
+.note::after{
+  content: "";
+  position: absolute; top: 0; bottom: 0; width: 40px;
+  pointer-events: none;
+  background: linear-gradient(to right, #c7a97c, rgba(199,169,124,0));
+}
+.note::before{ left: 0; transform: scaleX(-1); }
+.note::after{ right: 0; }
+
+@media (max-width: 768px){
+  .note{
+    text-align: left;               
+    --note-gap: 56px;      
+    --note-speed: 22s; 
+  }
+  .note-track{
+
+    animation: note-scroll var(--note-speed) linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .note-track{ animation: none !important; }
+}
+
+.note:hover .note-track{ animation-play-state: paused; }
+
+@keyframes note-scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+}
+@media (min-width: 769px){
+  .note{
+    text-align: center; 
+  }
+  .note-track{
+    display: inline-block;   
+    animation: none !important; 
+    transform: none !important;
+    gap: 0;                              
+  }
+  .note-item{
+    display: none;  
+  }
+  .note-item:first-child{
+    display: inline; 
+  }
+  .note::before,
+  .note::after{
+    display: none;
+  }
+}
+@media (max-width: 768px){
+  .hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.45) 0%,
+      rgba(0,0,0,0.25) 40%,
+      rgba(0,0,0,0.05) 80%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero .hero-content{
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero h1,
+  .hero .lead,
+  .hero .badge {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+
+  .hero .btn{
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255,255,255,0.1);
+  }
+  .hero .btn:hover{
+    background: rgba(255,255,255,0.25);
+  }
+}

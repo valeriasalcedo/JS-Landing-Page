@@ -1,24 +1,11 @@
-/* ==== Fuentes (UNA sola vez, aquí) ==== */
-/* Opción Google Fonts (simple) */
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pinyon+Script&display=swap");
 
-/* Si prefieres autohospedar, comenta el @import de arriba y usa esto:
-@font-face{
-  font-family: 'Pinyon Script';
-  src: url('/fonts/pinyon-script-v7-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-*/
-
-/* ==== Variables de fuente ==== */
 :root {
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-script: "Pinyon Script", cursive;
 }
 
-/* ==== Reseteo mínimo ==== */
 html, body, #root { height: 100%; }
 body {
   margin: 0;
@@ -30,20 +17,17 @@ body {
   background: var(--cream-50, #faf5ef);
 }
 
-/* Headings por defecto con DM Sans */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-weight: 700;
   letter-spacing: .02em;
 }
 
-/* Navbar mayúsculas más ajustadas */
 .nav-left a, .nav-right a { letter-spacing: .12em; }
 .call { letter-spacing: .06em; }
 
-/* ==== UTILIDADES TIPOGRÁFICAS ==== */
 
-/* Texto caligráfico (Pinyon) */
+
 .script {
   font-family: var(--font-script);
   font-weight: 400;
@@ -54,7 +38,6 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Título CTA: base DM Sans + parte cursiva en .script */
 .h2-cta {
   font-family: var(--font-body);
   text-transform: uppercase;
@@ -65,15 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
 }
 .h2-cta .script {
-  font-size: 1.3em;       /* agranda la palabra cursiva */
-  display: inline-block;  /* por si quieres ajustar baseline */
+  font-size: 1.3em;
+  display: inline-block;
   transform: translateY(2px);
 }
 
-/* Acento cursivo genérico, p.ej. "WHAT WE <span class='accent'>buy?</span>" */
 .accent { font-family: var(--font-script); text-transform: none; letter-spacing: 0; }
 
-/* Ejemplo de botón genérico con DM Sans */
 .btn-cta {
   display: inline-block;
   font-family: var(--font-body);

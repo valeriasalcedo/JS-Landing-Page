@@ -11,7 +11,6 @@ export default function ScrollToTopButton() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Hacer scroll suave hasta arriba
   const handleClick = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);

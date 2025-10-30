@@ -1,7 +1,6 @@
-/* ===== Footer.css ===== */
 
 :root{
-  --navy-900:#102a4a;   /* azul oscuro del sitio */
+  --navy-900:#102a4a;  
   --navy-800:#14335a;
   --white:#ffffff;
   --white-70: rgba(255,255,255,.7);
@@ -11,7 +10,7 @@
 .footer{
   background: linear-gradient(180deg, var(--navy-900), var(--navy-800));
   color: var(--white);
-  padding: 14px 16px;                 /* altura similar a la imagen */
+  padding: 14px 16px;                
 }
 
 .footer .container{
@@ -19,15 +18,14 @@
   margin: 0 auto;
 }
 
-/* Navegación principal del footer */
 .footer nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;                          /* espacio entre links */
+  gap: 28px;                       
   flex-wrap: wrap;
   line-height: 1;
-  margin: 0;                          /* sin márgenes extra */
+  margin: 0;                       
 }
 
 /* Links */
@@ -44,20 +42,17 @@
   transition: opacity .15s ease;
 }
 
-/* Separador • entre enlaces */
 .footer nav a:not(:last-child)::after{
   content: "•";
   color: var(--white-50);
   position: relative;
-  margin-left: 28px;                  /* separa la viñeta del link */
+  margin-left: 28px;                
 }
 
-/* Hover sutil */
 .footer nav a:hover{
   opacity: .85;
 }
 
-/* Línea legal */
 .footer small{
   display: block;
   text-align: center;
@@ -67,7 +62,6 @@
   letter-spacing: .02em;
 }
 
-/* Responsive: reduce el espacio en pantallas muy pequeñas */
 @media (max-width: 480px){
   .footer{
     padding: 12px 12px;

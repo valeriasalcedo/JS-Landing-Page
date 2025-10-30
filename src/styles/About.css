@@ -1,0 +1,278 @@
+.about-meet {
+  background-color: #faf6ef;
+  color: #2c2c2c;
+  font-family: "DM Sans", sans-serif;
+}
+
+.abt-hero {
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.abt-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.abt-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.abt-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #c7a97c;
+}
+
+.abt-hero__title {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 100px;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  transform: translateY(2px);
+  margin-bottom: 0%;
+}
+
+.abt-hero__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.abt-card {
+  margin: -50px auto 80px;
+  width: min(1100px, 92%);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 2px 20px #c7a97c;
+  padding: 40px 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.abt-card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.abt-card__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.abt-card__heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1d1d1d;
+}
+
+.abt-card__body p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.abt-pillrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.abt-pill {
+  background: #f7efe2;
+  border: 1px solid #d5c1a1;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: #7a5c32;
+  font-weight: 500;
+}
+
+.meet-jess{
+  background:#faf6ef;              
+  padding:80px 0 90px;
+}
+.meet-jess__grid{
+  width:min(1200px,92%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr; 
+  gap:56px;
+  align-items:center;
+}
+
+
+.meet-jess__bgtitle{
+  font-family:var(--font-script);
+  font-size:clamp(60px,12vw,550px);
+  font-weight: 600;
+  line-height:0.9;
+  color: #122a4a;
+  margin:0;
+   font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+
+}
+.meet-jess__intro{
+  margin-top:52px;
+  max-width:520px;
+  line-height:1.75;
+  color:#373737;
+}
+.meet-jess__text p{ margin-top:16px; color:#444; }
+
+.meet-jess__imagebox{
+  position:relative;
+  border-radius:32px;
+  overflow:hidden;
+  background:#d9cec4; 
+}
+.meet-jess__imagebox::before{
+  content:"";
+  position:absolute;
+  left:-25%;
+  top:-25%;
+  width:70%;
+  height:70%;
+  background:#cfc3b8; 
+  border-radius:50%;
+  z-index:0;
+}
+.meet-jess__image{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  max-height:520px;
+  margin-left:auto;  
+}
+
+@media (max-width: 1024px){
+  .meet-jess__grid{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  .meet-jess__bgtitle{ text-align:center; }
+  .meet-jess__text{ text-align:center; }
+  .meet-jess__intro{ margin:36px auto 0; }
+  .meet-jess__image{ max-height:460px; }
+}
+@media (max-width: 640px){
+  .meet-jess{ padding:60px 0 70px; }
+  .meet-jess__image{ max-height:380px; }
+}
+@media (max-width: 768px){
+
+  /* hero */
+  .abt-hero{
+    min-height: 50vh;
+  }
+  .abt-hero__content{
+    padding: 0 16px;
+  }
+  .abt-hero__title{
+    font-size: clamp(44px, 12vw, 62px);
+    line-height: 1;
+  }
+  .abt-hero__subtitle{
+    font-size: .95rem;
+  }
+
+  .abt-card{
+    width: 94%;
+    margin: -40px auto 50px;
+    padding: 26px 18px 28px;
+  }
+  .abt-card__grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .abt-card__heading{
+    font-size: 1.6rem;
+  }
+  .abt-pillrow{
+    gap: 8px;
+  }
+  .abt-pill{
+    font-size: .78rem;
+    padding: 5px 12px;
+  }
+
+  /* meet jess */
+  .meet-jess{
+    padding: 46px 0 56px;
+  }
+  .meet-jess__grid{
+    width: 94%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .meet-jess__bgtitle{
+    font-size: clamp(46px, 13vw, 68px); 
+    text-align: center;
+  }
+  .meet-jess__intro{
+    max-width: 100%;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  .meet-jess__text p{
+    text-align: center;
+  }
+
+  .meet-jess__imagebox{
+    max-width: 460px;
+    margin: 0 auto;
+    border-radius: 26px;
+  }
+  .meet-jess__image{
+    max-height: 320px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px){
+
+  .abt-hero{
+    min-height: 46vh;
+  }
+  .abt-hero__title{
+    font-size: clamp(38px, 15vw, 54px);
+  }
+
+  .abt-card{
+    width: 90%;
+    padding: 22px 14px 24px;
+    border-radius: 14px;
+  }
+
+  .meet-jess__imagebox{
+    width: 100%;
+  }
+  .meet-jess__image{
+    max-height: 280px;
+  }
+}

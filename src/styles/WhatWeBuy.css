@@ -1,4 +1,3 @@
-/* ===== WhatWeBuy.css ===== */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Pinyon+Script&display=swap');
 
@@ -7,16 +6,14 @@
   --ink:#623e2a;
 }
 
-/* Sección base tipo hero */
 .wwb{
   position: relative;
  min-height: 636px;
-  max-width: 100%;            /* ocupa toda la pantalla */
+  max-width: 100%;     
   overflow: hidden;
   background:#fff;
 }
 
-/* Imagen full-bleed */
 .wwb .wwb-bg{
   position: absolute;
   top:0; left:50%;
@@ -24,34 +21,31 @@
   width: 100vw;
   height: 100%;
   object-fit: cover;
-  object-position: left center;   /* rostro a la izquierda, aire a la derecha */
+  object-position: left center;  
   z-index: 1;
   pointer-events: none;
 }
 
-/* Overlay para legibilidad DESDE LA DERECHA hacia el centro */
 .wwb .wwb-overlay{
   position: absolute; inset: 0;
   z-index: 2;
  
 }
 
-/* Contenido sobre la imagen */
 .wwb .wwb-content{
   position: relative; z-index: 3;
-  min-height: inherit;                /* = 100vh */
+  min-height: inherit;           
   display: grid;
-  justify-items: end;                 /* empuja a la derecha */
-  align-items: center;                /* centra verticalmente */
-  padding: 96px clamp(24px,6vw,10px); /* respiración; derecha amplia */
+  justify-items: end;        
+  align-items: center;         
+  padding: 96px clamp(24px,6vw,10px); 
 }
 
-/* Bloque derecho */
 .wwb .wwb-right{
-  width: min(720px, 48vw);            /* ancho cómodo */
-  margin-left: auto;                  /* ancla a la derecha */
-  text-align: left;                   /* contenido interno normal */
-  font-family: "DM Sans", sans-serif; /* sin cursiva */
+  width: min(720px, 48vw);         
+  margin-left: auto;       
+  text-align: left;   
+  font-family: "DM Sans", sans-serif;
 }
 
 .smallcaps {
@@ -65,7 +59,6 @@
   margin-top: 50px;
 }
 
-/* “buy?” en Pinyon Script, sin mayúsculas ni tracking */
 .smallcaps .script{
   font-family: var(--font-script) !important;
   font-weight: 400;
@@ -81,7 +74,6 @@
 
 
 
-/* Subtítulo y texto */
 .wwb .h2{
   color: var(--ink);
   font-weight: 400;
@@ -91,7 +83,6 @@
 }
 .wwb p{ margin: 0 0 10px 0; color:var(--ink); }
 
-/* Lista con bullets dorados */
 .wwb ul{ margin: 50px 0 0 0; padding: 0; list-style: none; }
 .wwb li{
   position: relative; padding-left: 22px; margin: 10px 0;
@@ -105,11 +96,10 @@
   box-shadow: 0 0 0 2px rgba(199,169,124,.25);
 }
 
-/* Responsivo */
 @media (max-width: 992px){
   .wwb{ min-height: 90vh; }
   .wwb .wwb-content{
-    justify-items: start;         /* en móvil, vuelve a la izquierda */
+    justify-items: start;      
     padding: 72px 24px;
   }
   .wwb .wwb-right{ width: 100%; margin-left: 0; }
@@ -121,4 +111,26 @@
       rgba(255,255,255,0) 70%
     );
   }
+}
+@media (max-width: 992px){
+  .wwb .wwb-bg{
+    left: auto;
+    right: 0;
+    transform: none;
+    width: 120vw;
+
+    object-position: 88% center;
+
+  }
+  .wwb li{
+  position: relative; padding-left: 22px; margin: 10px 0;
+  line-height: 1.75; color:var(--ink);
+  font-size: 22px;
+}
+
+@media (max-width: 480px){
+  .wwb .wwb-bg{
+    object-position: 92% center;
+  }
+}
 }

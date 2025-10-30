@@ -1,4 +1,3 @@
-/* ===== Reasons.css ===== */
 :root{
   --blue-900:#0a1e3f;
   --blue-800:#112b51;
@@ -8,7 +7,6 @@
 
 }
 
-/* Sección oscura con imagen de fondo + overlay */
 .reasons.section{
   align-items: center;
   display: flex;
@@ -21,35 +19,31 @@
   border-top: 0;
   color:#143057;
   background:
-    url("../assets/Jewelry.png") center/cover no-repeat; /* <-- reemplaza la ruta si usas otra */
+    url("../assets/Jewelry.png") center/cover no-repeat;
 }
 
-/* Título */
 .reasons .reasons-content {
   margin-bottom: 80px;
 
 }
 .reasons .h2{
-  /* quita el ancho y padding que distorsionan el centrado */
-  max-width: 1000px;       /* opcional: controla el ancho, pero no forces width fijo */
-  margin: 0 auto;          /* centra el título */
+  max-width: 1000px;     
+  margin: 0 auto;  
   padding-left: 0;
 
   font-family: var(--font);
   text-align: center;
   text-transform: uppercase;
   font-size: 55px;
-  font-weight: 400;         /* 450 no es un peso estándar; usa 400/500 */
+  font-weight: 400;     
   color: #fff;
 
-  line-height: 0.5;        /* <-- clave: junta las dos líneas */
+  line-height: 0.5;    
 }
 
-/* si lo quieres aún más cerrado, baja a 1.0 o incluso 0.98 */
 .reasons .h2.tight { line-height: 1.0; }
 
 
-/* Grid de 3 tarjetas */
 .reasons .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,20 +51,20 @@
   max-width: 1600px;
 }
 
-/* Tarjeta */
 .reasons .card{
   position: relative;
+  justify-content: center;
+  align-items: center;
   padding: 20px 10px;
   border: 2px solid var(--card-line);
   border-radius: 4px;
-  background: rgba(104, 83, 83, 0);         /* leve vidrio */
+  background: rgba(104, 83, 83, 0);      
   box-shadow: 0 10px 28px rgba(0,0,0,.18) inset,
               0 8px 18px rgba(0,0,0,.12);
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-  min-height: 400px;                    /* para equilibrio visual */
+  min-height: 400px;        
 }
 
-/* Hover sutil */
 .reasons .card:hover{
   transform: translateY(-2px);
   background: rgba(0,0,0,.34);
@@ -78,19 +72,16 @@
               0 10px 20px rgba(0,0,0,.18);
 }
 
-/* Título de tarjeta */
 .reasons .card .h3{
+  justify-content: center;
   text-align:center;
   margin: 10px 5 10px ;
-  padding-left: 80px ;
   font-weight: 600;
   font-size: clamp(18px, 2.2vw, 32px);
   color: #c69f6b;
-  white-space: pre-line; /* respeta los \n */
-  width: 70%;
+  white-space: pre-line; 
 }
 
-/* Texto */
 .reasons .card p{
   margin: 0;
   text-align: center;
@@ -99,12 +90,39 @@
   opacity: .95;
   letter-spacing: .08em;
   font-size: clamp(14px, 1.4vw, 15px);
-  width: 95%;
-  padding-left: 20px ;
 }
 
-/* Responsivo */
-@media (max-width: 1024px){
-  .reasons .grid{ grid-template-columns: 1fr; gap: 22px; }
-  .reasons .card{ min-height: unset; }
+@media (max-width: 768px){
+  .reasons .h2{
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.05;     
+    padding-inline: 10px;    
+  }
+
+  .reasons .grid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+.reasons .card{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  border: 2px solid var(--card-line);
+  border-radius: 4px;
+  background: rgba(104, 83, 83, 0);
+  box-shadow: 0 10px 28px rgba(0,0,0,.18) inset,
+              0 8px 18px rgba(0,0,0,.12);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  min-height: 300px;          
+}
+}
+
+@media (max-width: 480px){
+  .reasons .h2{
+    font-size: clamp(26px, 10vw, 32px);
+    line-height: 1.1;
+  }
 }

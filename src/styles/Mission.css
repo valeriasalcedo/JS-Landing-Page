@@ -1,31 +1,26 @@
-/* ===== Fuentes (si no las tienes en el global) ===== */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Pinyon+Script&display=swap");
 
-/* ===== Mission ===== */
 .mission.section{
-  background: #f8f1e8;                 /* crema suave */
+  background: #f8f1e8;     
   padding: 80px 0 62px;
   min-height: 636px;
   max-width: 100%;
 }
 
-/* centramos y limitamos ancho para lectura cómoda */
 .mission .container{
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Título cursivo grande dorado */
 .mission .h2{
-  font-family: "Pinyon Script", cursive;   /* cursiva elegante */
+  font-family: "Pinyon Script", cursive; 
   font-weight: 400;
-  font-size: clamp(52px, 8vw, 150px);    /* muy grande como en la ref */
-  color: #c59c6d;                  /* dorado de marca */
+  font-size: clamp(52px, 8vw, 150px);   
+  color: #c59c6d;       
   margin: 0 0 12px 0;
 }
 
-/* Párrafos */
 .mission p{
   font-family: "DM Sans", sans-serif;
   font-size: clamp(16px, 1.8vw, 28px);
@@ -33,7 +28,6 @@
   margin: 18px auto;
   max-width: 1200px;
 }
-/* Separador sutil (como un hr muy tenue) */
 .mission .faint{
   height: 1px;
   border: 0;
@@ -48,20 +42,48 @@
   );
 }
 
-/* Remate en negrita más oscuro */
 .mission p strong{
   color: #623e2a;
   font-weight: 700;
   width: 1000px;
 }
 .mission p.promise{
-  white-space: nowrap;      /* no partir líneas */
   overflow-wrap: normal;
   word-break: normal;
-  max-width: none;          /* que no lo limite el max-width anterior */
+  max-width: none;       
   margin-top: 28px;
 }
 
 .mission p.secondary{
  margin-top: 5%;
 } 
+
+@media (max-width: 768px){
+  .mission.section{
+    padding: 64px 0 54px;
+  }
+
+  .mission .h2{
+    font-size: clamp(64px, 14vw, 120px);
+    line-height: 1.02;
+  }
+
+  .mission p{
+    font-size: clamp(18px, 4.4vw, 22px);
+    line-height: 1.6;
+    padding: 0 16px;        
+  }
+
+  .mission p strong{
+    width: auto;
+    display: inline;
+  }
+
+  .mission .faint{
+    max-width: 88vw;
+  }
+
+  .mission p.secondary{
+    margin-top: 6%;
+  }
+}
