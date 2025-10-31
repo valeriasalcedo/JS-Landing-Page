@@ -2,6 +2,7 @@
 import React from "react";
 import Section from "../../components/Section";
 import "../../styles/Charities.css";
+import jewelIcon from "../../assets/js-logo.png";
 
 export default function PartnerWithJS() {
   return (
@@ -9,8 +10,10 @@ export default function PartnerWithJS() {
       <Section narrow>
         <section className="partner">
            <h2 className="partner-title">
-          <span className="partner-block">Why Partner With</span>
-          <span className="partner-script">JS jewelry buyers</span>
+          <span className="partner-block">Why partner with</span>
+          <span className="partner-script">
+      <img src={jewelIcon} alt="" className="partner-script__icon" />
+    </span>
         </h2>
           <div className="partner-cards">
   <article className="partner-card">
