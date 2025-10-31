@@ -369,7 +369,6 @@ margin: 0;
 }
 
 .partner-card{
-  padding: 20px;
   position: relative;
   border: 2px solid var(--gold-500, #c69f6b);   /* borde dorado */
   border-radius: 6px;
@@ -401,6 +400,7 @@ margin: 0;
 
 .partner-card__text{
   margin-top: 0px;
+  padding: 20px;
   text-align: center;
   color: var(--brown-700, #6d4b2f);
   opacity: .95;
