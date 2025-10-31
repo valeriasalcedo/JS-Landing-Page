@@ -10,7 +10,7 @@ export default function PartnerWithJS() {
         <section className="partner">
            <h2 className="partner-title">
           <span className="partner-block">Why Partner With</span>
-          <span className="partner-script">Js jewelry buyers</span>
+          <span className="partner-script">JS jewelry buyers</span>
         </h2>
           <div className="partner-cards">
   <article className="partner-card">
@@ -39,7 +39,7 @@ export default function PartnerWithJS() {
     <h3 className="partner__heading">Ready to host a charity event?</h3>
     <p>
       <strong>Let’s make an impact together.</strong> <span role="img" aria-label="mail"></span>
-      &nbsp;Contact us at <b>[email/phone]</b> or fill out the form below to start
+      &nbsp;Contact us at <b>561-762-0730</b> or fill out the form below to start
       planning your charity partnership.
     </p>
   </div>

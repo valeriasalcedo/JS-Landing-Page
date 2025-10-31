@@ -60,16 +60,41 @@ export default function About() {
             <h1 className="meet-jess__bgtitle">Jess</h1>
 
             <p className="meet-jess__intro">
-              I lead our client services with 15+ years of appraisal experience.
-              My approach blends precision, discretion, and genuine
-              care—ensuring every client feels informed and confident throughout
-              the process.
+              Jessica Strikowski, founder of JS Jewelry Buyers, has been a
+              trusted licensed jewelry dealer in South Florida for over 18
+              years. Originally from New Jersey and raised in South Florida,
+              Jessica earned her bachelor’s degree in Marketing with high honors
+              from the University of Florida, where she was also a member of the
+              club rowing team{" "}
             </p>
 
             <p>
-              I believe every piece tells a story. My job is to honor that story
-              and deliver honest, transparent value with clear documentation and
-              immediate payment.
+              Her career began in marketing analytics at The Palm Beach Post and
+              later at Office Depot’s corporate headquarters, where she honed
+              her skills in data-driven strategy and consumer insights. After
+              starting a family in 2001, Jessica’s entrepreneurial spirit
+              flourished—she consulted for various companies and even founded an
+              online paleo bakery.
+            </p>
+
+            <p>
+              When the gold market surged in 2007, Jessica recognized an
+              opportunity and launched JS Jewelry Buyers. What began as a local
+              venture quickly expanded throughout Palm Beach County and across
+              the U.S., partnering with other licensed jewelers under her brand.
+            </p>
+            <p>
+              Jessica later spent seven years as Director of Operations in the
+              sports and entertainment security consulting industry, continuing
+              to buy gold part-time. In 2022, she returned to her passion
+              full-time—helping clients sell their fine jewelry with honesty,
+              expertise, and the highest level of professionalism.
+            </p>
+            <p>
+              Today, JS Jewelry Buyers is known for providing fair, transparent,
+              and top-of-market offers for gold, silver, platinum, and fine
+              jewelry—earning the trust of clients throughout South Florida and
+              beyond.
             </p>
           </div>
 

@@ -369,6 +369,7 @@ margin: 0;
 }
 
 .partner-card{
+  padding: 20px;
   position: relative;
   border: 2px solid var(--gold-500, #c69f6b);   /* borde dorado */
   border-radius: 6px;

@@ -136,18 +136,17 @@
 }
 .meet-jess__intro{
   margin-top:52px;
-  max-width:520px;
   line-height:1.75;
   color:#373737;
 }
-.meet-jess__text p{ margin-top:16px; color:#444; }
+.meet-jess__text p{ margin-top:16px; color:#444; line-height:1.75; font-family: var(--font-body); text-align: justify; }
 
 .meet-jess__imagebox{
   position:relative;
   border-radius:32px;
   overflow:hidden;
-  background:#d9cec4; 
-}
+  max-width:800px;
+  }
 .meet-jess__imagebox::before{
   content:"";
   position:absolute;
@@ -166,7 +165,7 @@
   height:auto;
   display:block;
   object-fit:cover;
-  max-height:520px;
+  max-height:1200px;
   margin-left:auto;  
 }
 
